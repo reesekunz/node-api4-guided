@@ -4,7 +4,9 @@
   "description": "Guided project for **Node API** module 4.",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js"
+    // can't use nodemon because nodemon is only local since installed as devDependency
   },
   "repository": {
     "type": "git",
