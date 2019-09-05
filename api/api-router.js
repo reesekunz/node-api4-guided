@@ -6,10 +6,12 @@ const router = express.Router();
 
 router.use(express.json());
 
+// Get to /api 
 router.get('/', (req, res) => {
   res.status(200).json({ api: 'up' });
 });
 
+// GET to /api/shouts 
 router.get('/shouts', (req, res, next) => {
   Shouts.find()
     .then(shouts => {
@@ -18,6 +20,7 @@ router.get('/shouts', (req, res, next) => {
     .catch(error => next(error));
 });
 
+// POST to /api/shouts 
 router.post('/shouts', (req, res, next) => {
   Shouts.add(req.body)
     .then(shout => {
