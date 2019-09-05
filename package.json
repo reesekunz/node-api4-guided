@@ -6,7 +6,6 @@
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js"
-    // can't use nodemon because nodemon is only local since installed as devDependency
   },
   "repository": {
     "type": "git",
