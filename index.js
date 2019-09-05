@@ -4,17 +4,18 @@ require("dotenv").config();
 
 const server = require("./api/server.js");
 
-// const defaults = require("./config/default");
-
-const port = 4000;
+// need to change port to make it dynamic so it can go with heroku
+const port = process.env.PORT || 4000;
 server.listen(port, () => {
   console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
 });
+
+// another way to do it by importing defaults
+
+// const defaults = require("./config/default");
 
 // server.listen(defaults.port, () => {
 //   console.log(
 //     `\n*** Server Running on http://localhost:${defaults.port} ***\n`
 //   );
 // });
-
-
